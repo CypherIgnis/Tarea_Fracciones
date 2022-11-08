@@ -1,8 +1,8 @@
 # Tarea_Fracciones
 class Fraction:
 #atributos#
-numerator=0
-denominator=1
+    numerator=0
+    denominator=1
 #fin seccion atributos#
 
 def __init__(self,numerator,denominator):
@@ -12,29 +12,29 @@ def __init__(self,numerator,denominator):
 def print(self):
     print(self.numerator,"/",self.denominator)
 
-def plus(self,b)
+def plus(self,b):
     numerator = self.numerator+b.numerator
     denominator = self.denominator+b.denominator
-    p=Fraction(numerator;denominator)
+    p=Fraction(numerator,denominator)
     p.print()
     
-def minus(self,b)
+def minus(self,b):
     numerator = self.numerator-b.numerator
     denominator = self.denominator-b.denominator
-    m=Fraction(numerator;denominator)
+    m=Fraction(numerator,denominator)
     m.print()
     
-def multiplication(self,b)
+def multiplication(self,b):
     numerator = self.numerator*b.numerator
     denominator = self.denominator*b.denominator
-    x=Fraction(numerator;denominator)
+    x=Fraction(numerator,denominator)
     x.print()
     
     
-def division(self,b)
+def division(self,b):
     numerator = self.numerator*b.denominator
     denominator = self.denominator*b.numerator
-    d=Fraction(numerator;denominator)
+    d=Fraction(numerator,denominator)
     d.print()
 
 print(o.numerator)
