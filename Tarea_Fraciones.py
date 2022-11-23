@@ -13,6 +13,16 @@ class Fraction():
     def printt(self):
         print(self.numerator,"/",self.denominator)
 
+    
+    def mcm (x,y):
+        z= max(x,y)
+
+        while True:
+            if (z % x == 0) and (z % y == 0):
+                return z
+            
+            z+=1  
+
     def plus(self,b):
         numerator = self.numerator+b.numerator
         denominator = self.denominator+b.denominator
@@ -42,6 +52,7 @@ class Fraction():
 o=Fraction(3,4)
 print(o.numerator)
 print(o.denominator)
+#print(mcm(o)) 
 a=Fraction(input("ingrese la fraccion a="))
 b=Fraction(input("ingrese la fraccion b="))
 a.printt()
