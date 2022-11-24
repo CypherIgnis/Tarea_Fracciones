@@ -1,4 +1,5 @@
 # Tarea_Fracciones
+import math
 class Fraction():
     #atributos#
     numerator=0
@@ -14,7 +15,7 @@ class Fraction():
         print(self.numerator,"/",self.denominator)
 
     
-    def mcm (x,y):
+    def mcm (self,x,y):
         z= max(x,y)
 
         while True:
@@ -23,28 +24,28 @@ class Fraction():
             
             z+=1  
 
-    def plus(self,b):
-        numerator = self.numerator+b.numerator
-        denominator = self.denominator+b.denominator
+    def plus(self,a,b):
+        numerator = float(self.numerator)+float(a.numerator)+float(b.numerator)
+        denominator = float(self.mcm)
         p=Fraction(numerator,denominator)
         p.printt()
 
-    def minus(self,b):
-        numerator = self.numerator-b.numerator
-        denominator = self.denominator-b.denominator
+    def minus(self,a,b):
+        numerator = float(self.numerator)-float(a.numerator)-float(b.numerator)
+        denominator = float(self.mcm)
         m=Fraction(numerator,denominator)
         m.printt()
 
-    def multiplication(self,b):
-        numerator = self.numerator*b.numerator
-        denominator = self.denominator*b.denominator
+    def multiplication(self,a1,b1,a2,b2):
+        numerator = float(self.numerator)*float(a1.numerator)*float(b1.numerator)
+        denominator = float(self.numerator)*float(a2.denominator)*float(b2.denominator)
         x=Fraction(numerator,denominator)
         x.printt()
 
 
-    def division(self,b):
-        numerator = self.numerator*b.denominator
-        denominator = self.denominator*b.numerator
+    def division(self,a1,b1,a2,b2):
+        numerator = float(self.numerator)*float(a1.numerator)*float(b2.denominator)
+        denominator = float(self.numerator)*float(a2.numerator)*float(b1.denominator)
         d=Fraction(numerator,denominator)
         d.printt()
 
@@ -52,16 +53,17 @@ class Fraction():
 o=Fraction(3,4)
 print(o.numerator)
 print(o.denominator)
-#print(mcm(o)) 
-a=Fraction(input("ingrese la fraccion a="))
-b=Fraction(input("ingrese la fraccion b="))
+a=Fraction(float(input("ingrese la fraccion a1=")),float(input("ingrese la fraccion a2=")))
+b=Fraction(float(input("ingrese la fraccion b1=")),float(input("ingrese la fraccion b2=")))
+print(a.mcm(a.denominator,b.denominator)) 
 a.printt()
 b.printt()
-p=b.plus(2)
+p=a.plus(a.numerator,b.numerator)
 print(p)
-m=a.minus(2)
+m=b.minus(a.numerator,b.numerator)
 print(m)
-x=b.multiplication(4)
+x=a.multiplication(a.numerator,b.numerator,a.denominator,b.denominator)
 print(x)
-d=a.division(3)
+d=b.division(a.numerator,b.denominator,b.numerator,a.denominator)
 print(d)
+
