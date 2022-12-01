@@ -8,8 +8,8 @@ class Fraction():
 
     def __init__(self,numerator,denominator):
         print("Comenzando programa")
-        self.numerator=numerator
-        self.denominator=denominator
+        self.__numerator=numerator
+        self.__denominator=denominator
 
     def printt(self):
         print(self.numerator,"/",self.denominator)
@@ -23,7 +23,19 @@ class Fraction():
                 return z
             
             z+=1  
-
+    
+    def get_numerator(self):
+        return self.__numerator
+    
+    def set__numerator(self,value):
+        self.__numerator = value
+    
+    def get__denominator(self):
+        return self.__denominator
+    
+    def set__denominator(self,value):
+        self.__denominator = value
+    
     def plus(self,a,b):
         numerator = float(self.numerator)+float(a.numerator)+float(b.numerator)
         denominator = float(self.mcm)
